@@ -5,7 +5,7 @@ Créer une API en javascript vanilla afin de pouvoir créer une leçon, les cons
 
 ## Installation
 1. Cloner le projet.\
-``git clone ``
+``git clone https://github.com/Adrizen89/API_Lessons.git``
 2. Installer le projet\
 ``cd API_Lessons``\
 ``npm install``
