@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lesson Management</title>
+</head>
+<body class="bg-slate-900 text-gray-800">
+    <section class="flex flex-col items-center min-h-screen p-6 space-y-8">
+        <!-- Formulaire de création -->
+        <div class="bg-slate-200 shadow-lg rounded-lg w-full max-w-lg p-8">
+            <h2 class="text-2xl font-semibold text-center text-slate-900 mb-6">Créer une leçon</h2>
+            <form id="lessonForm" class="space-y-4">
+                <div class="form-group">
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Titre</label>
+                    <input 
+                        id="title" 
+                        name="title" 
+                        type="text" 
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                        placeholder="Entrer le titre" 
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="numberOfLessons" class="block text-sm font-medium text-gray-700 mb-1">Nombre de leçons</label>
+                    <input 
+                        id="numberOfLessons" 
+                        name="numberOfLessons" 
+                        type="number" 
+                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                        placeholder="Entrer le nombre de leçons" 
+                        required>
+                </div>
+                <div class="form-group flex items-center">
+                    <input 
+                        id="isActive" 
+                        name="isActive" 
+                        type="checkbox" 
+                        class="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500">
+                    <label for="isActive" class="ml-2 text-sm font-medium text-gray-700">Active?</label>
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-slate-600 text-white py-2 px-4 rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Créer une leçon
+                </button>
+            </form>
+            <div id="responseMessage" class="mt-4 text-center text-sm text-gray-600"></div>
+        </div>
+
+        <!-- Barre de recherche -->
+        <div class="w-full max-w-lg">
+            <input 
+                type="text" 
+                id="searchBar" 
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+                placeholder="Recherche par le titre de leçon...">
+        </div>
+
+        <!-- Liste des cours -->
+        <div class="container mx-auto max-w-6xl p-4">
+            <h1 class="text-3xl font-bold text-center text-white mb-6">Leçons</h1>
+            <div id="lessonsList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Les cartes seront générées ici dynamiquement -->
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
